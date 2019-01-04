@@ -43,4 +43,11 @@ public class Faktura{
     public double getPodatek(){
         return this.podatek;
     }
+
+    public String getNumer(){
+        return this.numer;
+    }
+    public List<PozycjaFaktury> getPozycje(){
+        return this.pozycjeFaktury;
+    }
 }
