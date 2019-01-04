@@ -5,10 +5,13 @@ public class ManagerFaktur{
 
     }
     public void utworzFakture(String numer){
-        
+        Faktura temp = new Faktura(numer);
+        faktury.add(temp);
     }
     public Faktura znajdzFakture(String numer){
-
+        for (Faktura f : faktury) {
+            if(faktur)
+        }
     }
     public List<Faktura> znajdzFakture(Produkt produkt){
 
@@ -20,6 +23,6 @@ public class ManagerFaktur{
 
     }
     public void wyswietlNazwyFaktur(){
-        
+
     }
 }
