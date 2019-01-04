@@ -3,9 +3,9 @@ public class Main{
         ManagerFaktur manager = new ManagerFaktur();
 
         
-        // manager.utworzFakture("10121");
-        // manager.utworzFakture("10122");
-        // manager.utworzFakture("10123");
+        manager.utworzFakture("10121");
+        manager.utworzFakture("10122");
+        manager.utworzFakture("10123");
 
         Faktura faktura1 = manager.znajdzFakture("10121");
         Faktura faktura2 = manager.znajdzFakture("10122");
@@ -43,6 +43,7 @@ public class Main{
         manager.usunFakture("10121");
         manager.usunFakture("10122");
         manager.usunFakture("10123");
+        System.out.println("Po usunieciu");
 
         manager.wyswietlNazwyFaktur();
 

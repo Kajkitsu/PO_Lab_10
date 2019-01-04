@@ -1,14 +1,13 @@
+import java.util.ArrayList;
 import java.util.List;
 public class ManagerFaktur{
-    private List<Faktura> faktury;
+    private List<Faktura> faktury = new ArrayList<>();
     public ManagerFaktur(){
-        faktury = null;
 
     }
 
     public void utworzFakture(String numer){
-        Faktura temp = new Faktura(numer);
-        faktury.add(temp);
+        faktury.add(new Faktura(numer));
     }
 
     public Faktura znajdzFakture(String numer){
@@ -20,8 +19,8 @@ public class ManagerFaktur{
         return null;
     }
     public List<Faktura> znajdzFakture(Produkt produkt){
-        List<PozycjaFaktury> temPozycje = null;
-        List<Faktura> tempFaktury = null; 
+        List<PozycjaFaktury> temPozycje = new ArrayList<>();
+        List<Faktura> tempFaktury = new ArrayList<>(); 
         boolean exist=false;
         for (Faktura f : faktury) {
             temPozycje = f.getPozycje();
@@ -38,7 +37,7 @@ public class ManagerFaktur{
         return tempFaktury;
     }
     public List<Faktura> znajdzFakture(double cenaFrom, double cenaTo){
-        List<Faktura> tempFaktura = null;
+        List<Faktura> tempFaktura = new ArrayList<>();
         for (Faktura f : faktury) {
             if(f.getWartosc()>cenaFrom && f.getWartosc()<cenaTo){
                 tempFaktura.add(f);
@@ -50,7 +49,7 @@ public class ManagerFaktur{
     public void usunFakture(String numer){
         for (Faktura f : faktury) {
             if(f.getNumer() == numer){
-                faktury.remove(f);
+                f=null;
             }
         }
     }

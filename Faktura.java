@@ -1,8 +1,9 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Faktura{
     private String numer;
-    private List<PozycjaFaktury> pozycjeFaktury;
+    private List<PozycjaFaktury> pozycjeFaktury = new ArrayList<>();
     private double wartoscNetto;
     private double podatek;
 
