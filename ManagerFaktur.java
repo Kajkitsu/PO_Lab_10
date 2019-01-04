@@ -20,7 +20,7 @@ public class ManagerFaktur{
         List<PozycjaFaktury> temPozycje;
         List<Faktura> tempFaktury; 
         boolean exist=false;
-        for (Faktura f : faktura) {
+        for (Faktura f : faktury) {
             temPozycje = f.getPozycje();
             for(PozycjeFaktury pozycja: temPozycje){
                 if(pozycja.getProdukt() == produkt){
@@ -36,7 +36,7 @@ public class ManagerFaktur{
     }
     public List<Faktura> znajdzFakture(double cenaFrom, double cenaTo){
         List<Faktura> tempFaktura;
-        for (Faktura f : faktura) {
+        for (Faktura f : faktury) {
             if(f.getWartosc()>cenaFrom && f.getWartosc()<cenaTo){
                 tempFaktura.add(f);
             }
@@ -45,7 +45,7 @@ public class ManagerFaktur{
     }
     public void usunFakture(String numer){
         for (Faktura f : faktura) {
-            if(f.getNumer() == Numer){
+            if(f.getNumer() == numer){
                 faktury.remove(f);
             }
         }
