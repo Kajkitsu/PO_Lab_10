@@ -1,11 +1,15 @@
 public class Main{
     public static void main(String[] args) {
         ManagerFaktur manager = new ManagerFaktur();
-        Faktura faktura1 = new Faktura("10121");
+
         
-        manager.utworzFakture("10121");
-        manager.utworzFakture("10122");
-        manager.utworzFakture("10123");
+        // manager.utworzFakture("10121");
+        // manager.utworzFakture("10122");
+        // manager.utworzFakture("10123");
+
+        Faktura faktura1 = manager.znajdzFakture("10121");
+        Faktura faktura2 = manager.znajdzFakture("10122");
+        Faktura faktura3 = manager.znajdzFakture("10123");
 
         Produkt dlugopis = new Dlugopis(10,10);
         Produkt zeszyt = new Zeszyt(10, 10);
@@ -38,7 +42,7 @@ public class Main{
 
         manager.usunFakture("10121");
         manager.usunFakture("10122");
-        manager.usunFakture("10121");
+        manager.usunFakture("10123");
 
         manager.wyswietlNazwyFaktur();
 
