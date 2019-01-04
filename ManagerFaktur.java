@@ -17,12 +17,12 @@ public class ManagerFaktur{
         return null;
     }
     public List<Faktura> znajdzFakture(Produkt produkt){
-        List<PozycjaFaktury> temPozycje;
-        List<Faktura> tempFaktury; 
+        List<PozycjaFaktury> temPozycje = null;
+        List<Faktura> tempFaktury = null; 
         boolean exist=false;
         for (Faktura f : faktury) {
             temPozycje = f.getPozycje();
-            for(PozycjeFaktury pozycja: temPozycje){
+            for(PozycjaFaktury pozycja: temPozycje){
                 if(pozycja.getProdukt() == produkt){
                     exist = true;
                 }
@@ -35,7 +35,7 @@ public class ManagerFaktur{
         return tempFaktury;
     }
     public List<Faktura> znajdzFakture(double cenaFrom, double cenaTo){
-        List<Faktura> tempFaktura;
+        List<Faktura> tempFaktura = null;
         for (Faktura f : faktury) {
             if(f.getWartosc()>cenaFrom && f.getWartosc()<cenaTo){
                 tempFaktura.add(f);
@@ -43,15 +43,17 @@ public class ManagerFaktur{
         }
         return tempFaktura;
     }
+
     public void usunFakture(String numer){
-        for (Faktura f : faktura) {
+        for (Faktura f : faktury) {
             if(f.getNumer() == numer){
                 faktury.remove(f);
             }
         }
     }
+
     public void wyswietlNazwyFaktur(){
-        for (Faktura f : faktura) {
+        for (Faktura f : faktury) {
            System.out.println(f.getNumer());
         }
     }

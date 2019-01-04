@@ -10,7 +10,7 @@ public class Faktura{
         this.numer = numer;
     }
     public void dodajPozycje(Produkt produkt, int ilosc){
-        PozycjaFaktury tempPozycja = new Pozycja(produkt, ilosc);
+        PozycjaFaktury tempPozycja = new PozycjaFaktury(produkt, ilosc);
         pozycjeFaktury.add(tempPozycja);
     }
     public void dodajPozycje(PozycjaFaktury pozycjaFaktury){
