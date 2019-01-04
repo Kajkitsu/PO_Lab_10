@@ -47,11 +47,13 @@ public class ManagerFaktur{
     }
 
     public void usunFakture(String numer){
+        Faktura tmpFaktura = null;
         for (Faktura f : faktury) {
             if(f.getNumer() == numer){
-                f=null;
+                tmpFaktura=f;
             }
         }
+        faktury.remove(tmpFaktura);
     }
 
     public void wyswietlNazwyFaktur(){

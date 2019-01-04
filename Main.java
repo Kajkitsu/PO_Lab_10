@@ -23,6 +23,8 @@ public class Main{
 
         faktura3.dodajPozycje(new PozycjaFaktury(dlugopis, 2));
         faktura3.dodajPozycje(new PozycjaFaktury(zeszyt, 4));
+        faktura3.dodajPozycje(new Zeszyt(222,1),1);
+        faktura3.dodajPozycje(new Dlugopis(5,1),4);
 
         faktura1.przelicz();
         faktura2.przelicz();

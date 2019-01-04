@@ -20,10 +20,12 @@ public class Faktura{
     public void wyswietlFakture(){
         for (PozycjaFaktury i : pozycjeFaktury) {
             Produkt tempProdukt = i.getProdukt();
-            System.out.print(tempProdukt.nazwa());
-            System.out.print(tempProdukt.getCena());
-            System.out.print(tempProdukt.getPodatek());
+            System.out.print(tempProdukt.nazwa()+ " ");
+            System.out.print(tempProdukt.getCena()+ " ");
+            System.out.print(tempProdukt.getPodatek()+" ");
+
         }
+        System.out.println();
     }
     public double przelicz(){
         double suma = 0.0;
